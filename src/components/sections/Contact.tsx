@@ -2,16 +2,7 @@
 
 import { motion } from "framer-motion";
 import { ArrowRight, Calendar, Mail, MessageCircle, Phone } from "lucide-react";
-import { useState, useEffect } from "react";
-import { PopupModal } from "react-calendly";
-
 export default function Contact() {
-  const [isCalendlyOpen, setIsCalendlyOpen] = useState(false);
-  const [rootElement, setRootElement] = useState<HTMLElement | null>(null);
-
-  useEffect(() => {
-    setRootElement(document.body);
-  }, []);
   return (
     <section id="contact" className="py-32 bg-deep-navy relative overflow-hidden">
       {/* Abstract Background Element */}
@@ -38,7 +29,7 @@ export default function Contact() {
 
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
             <motion.button
-              onClick={() => setIsCalendlyOpen(true)}
+              onClick={() => window.open("https://wa.me/919115783676?text=Hi,%20Deepesh%20Let's%20Connect", "_blank")}
               initial={{ opacity: 0, x: -20 }}
               whileInView={{ opacity: 1, x: 0 }}
               viewport={{ once: true }}
@@ -49,16 +40,16 @@ export default function Contact() {
                 <Calendar className="w-6 h-6" />
               </div>
               <div>
-                <h3 className="text-2xl font-bold text-white mb-2">Book Consultation</h3>
-                <p className="text-slate-400 font-inter">Schedule a 1-on-1 session via Calendly.</p>
+                <h3 className="text-2xl font-bold text-white mb-2">Book Appointment</h3>
+                <p className="text-slate-400 font-inter">Schedule a 1-on-1 session.</p>
               </div>
               <div className="mt-auto flex items-center text-electric-blue font-medium group-hover:gap-3 transition-all gap-2">
-                Find a slot <ArrowRight className="w-4 h-4" />
+                Connect on WhatsApp <ArrowRight className="w-4 h-4" />
               </div>
             </motion.button>
 
             <motion.a
-              href="mailto:hello@deepeshkumar.com"
+              href="mailto:deepesh.dcd@gmail.com"
               initial={{ opacity: 0, x: 20 }}
               whileInView={{ opacity: 1, x: 0 }}
               viewport={{ once: true }}
@@ -73,12 +64,12 @@ export default function Contact() {
                 <p className="text-slate-400 font-inter">Drop a message anytime.</p>
               </div>
               <div className="mt-auto flex items-center text-cyan font-medium group-hover:gap-3 transition-all gap-2">
-                hello@deepeshkumar.com <ArrowRight className="w-4 h-4" />
+                deepesh.dcd@gmail.com <ArrowRight className="w-4 h-4" />
               </div>
             </motion.a>
 
             <motion.a
-              href="https://wa.me/1234567890"
+              href="https://wa.me/919115783676?text=Hi,%20Deepesh%20Let's%20Connect"
               target="_blank"
               initial={{ opacity: 0, x: -20 }}
               whileInView={{ opacity: 1, x: 0 }}
@@ -122,14 +113,6 @@ export default function Contact() {
         </div>
       </div>
 
-      {rootElement && (
-        <PopupModal
-          url="https://calendly.com/dummy"
-          onModalClose={() => setIsCalendlyOpen(false)}
-          open={isCalendlyOpen}
-          rootElement={rootElement}
-        />
-      )}
     </section>
   );
 }

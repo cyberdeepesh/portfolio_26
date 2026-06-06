@@ -46,14 +46,14 @@ export default function About() {
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 lg:gap-24 items-start">
           {/* Left - Sticky Image */}
-          <div className="lg:sticky lg:top-32 h-[500px] md:h-[700px] w-full rounded-3xl overflow-hidden glass-panel group">
+          <div className="lg:sticky lg:top-32 w-full rounded-3xl overflow-hidden glass-panel group">
             <img
-              src="https://images.unsplash.com/photo-1555066931-4365d14bab8c?auto=format&fit=crop&q=80"
+              src="images/deepesh/my-pic.png"
               alt="Deepesh Working"
-              className="w-full h-full object-cover transition-transform duration-1000 group-hover:scale-105"
+              className="w-full h-auto object-contain transition-transform duration-1000 group-hover:scale-105"
             />
             <div className="absolute inset-0 bg-gradient-to-t from-deep-navy via-transparent to-transparent opacity-80"></div>
-            <motion.div 
+            <motion.div
               style={{ y: yTransform }}
               className="absolute -right-12 -bottom-12 w-64 h-64 bg-emerald/20 blur-[100px] rounded-full"
             />

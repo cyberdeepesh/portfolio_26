@@ -9,6 +9,8 @@ import Approach from "@/components/sections/Approach";
 import TechStack from "@/components/sections/TechStack";
 import Testimonials from "@/components/sections/Testimonials";
 import Achievements from "@/components/sections/Achievements";
+import Podcasts from "@/components/sections/Podcasts";
+import GrowthPartner from "@/components/sections/GrowthPartner";
 import Contact from "@/components/sections/Contact";
 import Footer from "@/components/layout/Footer";
 
@@ -17,15 +19,15 @@ export default function Home() {
     <main className="flex flex-col min-h-screen bg-deep-navy text-white overflow-hidden">
       <Hero />
       <About />
+      <Podcasts />
       <Stats />
       <Ventures />
+      <GrowthPartner />
       <Expertise />
-      <SuccessStories />
       <Mentorship />
       <Approach />
       <TechStack />
       <Testimonials />
-      <Achievements />
       <Contact />
       <Footer />
     </main>

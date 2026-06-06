@@ -4,17 +4,11 @@ import { motion, useScroll, useTransform, useMotionTemplate, useMotionValue } fr
 import { ArrowRight, Sparkles, Code2, Rocket } from "lucide-react";
 import { useEffect, useRef, useState } from "react";
 import Link from "next/link";
-import { PopupModal } from "react-calendly";
+
 
 export default function Hero() {
   const [mounted, setMounted] = useState(false);
   const containerRef = useRef<HTMLDivElement>(null);
-  const [isCalendlyOpen, setIsCalendlyOpen] = useState(false);
-  const [rootElement, setRootElement] = useState<HTMLElement | null>(null);
-
-  useEffect(() => {
-    setRootElement(document.body);
-  }, []);
   
   // Mouse position for gradient tracking
   const mouseX = useMotionValue(0);
@@ -168,7 +162,7 @@ export default function Hero() {
             {/* Magnetic Button */}
             <div 
               ref={btnRef as any}
-              onClick={() => setIsCalendlyOpen(true)}
+              onClick={() => window.open("https://wa.me/919115783676?text=Hi,%20Deepesh%20Let's%20Connect", "_blank")}
               onMouseMove={handleBtnMove}
               onMouseLeave={handleBtnLeave}
               className="relative group cursor-pointer block"
@@ -176,9 +170,9 @@ export default function Hero() {
               <motion.div
                 animate={{ x: btnPos.x, y: btnPos.y }}
                 transition={{ type: "spring", stiffness: 150, damping: 15, mass: 0.1 }}
-                className="px-8 py-5 bg-white text-deep-navy hover:bg-slate-200 rounded-full font-bold text-lg transition-colors flex items-center justify-center gap-3 overflow-hidden"
+                className="px-8 py-5 bg-sky-400 text-deep-navy hover:bg-slate-200 hover:text-sky-600 rounded-full font-bold text-lg transition-colors flex items-center justify-center gap-3 overflow-hidden"
               >
-                <span className="relative z-10">Book Consultation</span>
+                <span className="relative z-10">Book Appointment</span>
                 <ArrowRight className="w-5 h-5 relative z-10 group-hover:translate-x-1 transition-transform" />
               </motion.div>
               {/* Glow effect behind button */}
@@ -196,14 +190,6 @@ export default function Hero() {
         </motion.div>
       </motion.div>
       
-      {rootElement && (
-        <PopupModal
-          url="https://calendly.com/dummy"
-          onModalClose={() => setIsCalendlyOpen(false)}
-          open={isCalendlyOpen}
-          rootElement={rootElement}
-        />
-      )}
     </section>
   );
 }
