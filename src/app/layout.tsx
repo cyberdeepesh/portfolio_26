@@ -41,7 +41,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: "Deepesh Kumar | Technology Educator & Entrepreneur",
     description: "Helping students master software engineering, AI, data science and digital skills while helping businesses leverage technology for growth.",
-    url: "https://deepeshkumar.com",
+    url: "https://deepesh-dcd.vercel.app",
     siteName: "Deepesh Kumar Portfolio",
     images: [
       {
