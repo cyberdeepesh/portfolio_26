@@ -30,11 +30,27 @@ export const metadata: Metadata = {
     "Amritsar Technology Expert",
     "Tech Entrepreneur India"
   ],
+  authors: [{ name: "Deepesh Kumar" }],
+  creator: "Deepesh Kumar",
+  publisher: "Deepesh Kumar",
+  icons: {
+    icon: "/images/deepesh/my-pic.png",
+    shortcut: "/images/deepesh/my-pic.png",
+    apple: "/images/deepesh/my-pic.png",
+  },
   openGraph: {
     title: "Deepesh Kumar | Technology Educator & Entrepreneur",
     description: "Helping students master software engineering, AI, data science and digital skills while helping businesses leverage technology for growth.",
-    url: "https://deepeshkumar.com", // Placeholder
-    siteName: "Deepesh Kumar",
+    url: "https://deepeshkumar.com",
+    siteName: "Deepesh Kumar Portfolio",
+    images: [
+      {
+        url: "/images/deepesh/my-pic.png",
+        width: 1200,
+        height: 630,
+        alt: "Deepesh Kumar - Technology Educator & Entrepreneur",
+      },
+    ],
     locale: "en_US",
     type: "website",
   },
@@ -42,6 +58,18 @@ export const metadata: Metadata = {
     card: "summary_large_image",
     title: "Deepesh Kumar | Technology Educator & Entrepreneur",
     description: "Technology Educator, Entrepreneur, Software Architect, AI & Data Science Mentor",
+    images: ["/images/deepesh/my-pic.png"],
+  },
+  robots: {
+    index: true,
+    follow: true,
+    googleBot: {
+      index: true,
+      follow: true,
+      "max-video-preview": -1,
+      "max-image-preview": "large",
+      "max-snippet": -1,
+    },
   },
 };
 
